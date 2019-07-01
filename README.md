@@ -1,9 +1,9 @@
 # mail-client-adaptor
 A mail client written in Java
 
-# Work in progress currently just prints the subject, only on gmail
+## Work in progress currently just prints the subject, only tested on gmail
 
-# Example useage
+## Example useage
 
 ```java
 final String username = "Test@gmail.com";
