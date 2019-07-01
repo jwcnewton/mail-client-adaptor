@@ -1,4 +1,4 @@
-# mail-client-adaptor
+# Mail Client Adaptor
 A mail client written in Java
 
 ## Work in progress currently just prints the subject, only tested on gmail
