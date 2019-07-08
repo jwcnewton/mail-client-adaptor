@@ -6,8 +6,8 @@ A mail client written in Java
 ## Example useage
 
 ```java
-final String username = "Test@gmail.com";
-final String password = "****";
+final String username = "test@gmail.com";
+final String password = "*******";
 
 ClientBuilder clientBuilder = new ClientBuilder
         .Builder()
@@ -19,10 +19,22 @@ ClientBuilder clientBuilder = new ClientBuilder
         .host("smtp.gmail.com")
         .build();
 
-try (MailClient client = new MailClient(clientBuilder)){
-    client.addListener(new NewMessageListener());
+try(MailClient client = new MailClient(clientBuilder)){
+    //Set poll interval to 5 seconds
+    client.pollInterval = 5000;
 
-    client.pollMailBox();
-} catch (Exception ignore) {}
+    //Simple print message listener
+    client.addListener(new PrintNewMessageListener());
+
+    //Run poll
+    client.start();
+
+    //Wait an amount of time
+    Thread.sleep(100000);
+
+    client.stop();
+} catch (Exception e) {
+    e.printStackTrace();
+}
 
 ```
