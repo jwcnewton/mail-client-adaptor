@@ -1,9 +1,11 @@
 # Mail Client Adaptor
 A mail client written in Java
 
-## Work in progress currently just prints the subject, only tested on gmail
+## Work in progress
 
-## Example useage
+## Example usage
+
+Print subject using `INewMessageHandler` interface
 
 ```java
 final String username = "test@gmail.com";
