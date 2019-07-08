@@ -1,11 +1,14 @@
-package utils;
+package builders;
 
 import properties.PreConfiguredProperties;
+import sessions.DefaultEmailSession;
+import sessions.interfaces.IEmailSession;
 
 import java.util.Properties;
 
 public class ClientBuilder {
     private final Properties clientProperties;
+    private final IEmailSession session;
     private final String protocol;
     private final String email;
     private final String password;
@@ -19,10 +22,17 @@ public class ClientBuilder {
         this.password = builder.password;
         this.mailbox = builder.mailbox;
         this.host = builder.host;
+
+        if (builder.session == null){
+            builder.session = new DefaultEmailSession();
+        }
+
+        this.session = builder.session;
     }
 
     public static class Builder {
         private Properties clientProperties;
+        private IEmailSession session;
         private String protocol;
         private String email;
         private String password;
@@ -37,7 +47,8 @@ public class ClientBuilder {
 
         public Builder clientProperties(String clientType){
             switch (clientType.toLowerCase()) {
-                case "gmail":
+                //Todo: Add more client properties
+                default:
                     this.clientProperties = PreConfiguredProperties.gmailSmtpProperties();
             }
 
@@ -68,10 +79,19 @@ public class ClientBuilder {
             this.host = host;
             return this;
         }
+
+        public Builder session(IEmailSession session){
+            this.session = session;
+            return this;
+        }
     }
 
     public Properties getclientProperties() {
         return clientProperties;
+    }
+
+    public IEmailSession getSession () {
+        return session;
     }
 
     public String getProtocol() {

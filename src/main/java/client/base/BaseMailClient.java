@@ -1,4 +1,4 @@
-package client;
+package client.base;
 
 import listeners.interfaces.INewMessageHandler;
 
@@ -6,7 +6,7 @@ import javax.mail.Message;
 import java.util.ArrayList;
 import java.util.List;
 
-class BaseMailClient {
+public class BaseMailClient {
     private List<INewMessageHandler> listeners = new ArrayList<>();
 
     public void newMessageReceived(Message message) {

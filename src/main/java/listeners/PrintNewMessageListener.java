@@ -6,7 +6,7 @@ import javax.mail.Message;
 import javax.mail.MessagingException;
 
 
-public class NewMessageListener implements INewMessageHandler {
+public class PrintNewMessageListener implements INewMessageHandler {
 
     @Override
     public void NewMessage(Message newMessage) {
