@@ -7,6 +7,36 @@
     <groupId>com.github.jwcnewton</groupId>
     <artifactId>mail-client-adaptor</artifactId>
     <version>1.0.0</version>
+
+
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Pure Java Mail Client</description>
+    <url>https://github.com/jwcnewton/mail-client-adaptor</url>
+
+    <scm>
+        <connection>scm:git:https://github.com/jwcnewton/mail-client-adaptor.git</connection>
+        <developerConnection>scm:git:ssh://github.com/jwcnewton/mail-client-adaptor.git</developerConnection>
+        <url>https://github.com/jwcnewton/mail-client-adaptor</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Jonathan Newton</name>
+            <email>jwcnewton@gmail.com</email>
+            <organization>Github jwcnewton</organization>
+            <organizationUrl>https://github.com/jwcnewton</organizationUrl>
+        </developer>
+    </developers>
+
     <build>
         <plugins>
             <plugin>
