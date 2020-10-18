@@ -1,7 +1,8 @@
 # Mail Client Adaptor
 A mail client written in Java
 
-## Work in progress
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.jwcnewton/mail-client-adaptor/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.jwcnewton/mail-client-adaptor)
+
 
 ## Example usage
 
