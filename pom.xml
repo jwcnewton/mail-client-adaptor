@@ -189,5 +189,11 @@
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+
+        <repository>
+            <id>github</id>
+            <name>GitHub repo</name>
+            <url>https://maven.pkg.github.com/jwcnewton/mail-client-adaptor</url>
+        </repository>
     </distributionManagement>
 </project>
