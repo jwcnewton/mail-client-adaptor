@@ -6,6 +6,12 @@ import sessions.interfaces.IEmailSession;
 
 import java.util.Properties;
 
+/**
+ * <p>ClientBuilder class.</p>
+ *
+ * @author jonathannewton
+ * @version $Id: $Id
+ */
 public class ClientBuilder {
     private final Properties clientProperties;
     private final IEmailSession session;
@@ -86,30 +92,65 @@ public class ClientBuilder {
         }
     }
 
+    /**
+     * <p>Getter for the field <code>clientProperties</code>.</p>
+     *
+     * @return a {@link java.util.Properties} object.
+     */
     public Properties getclientProperties() {
         return clientProperties;
     }
 
+    /**
+     * <p>Getter for the field <code>session</code>.</p>
+     *
+     * @return a {@link sessions.interfaces.IEmailSession} object.
+     */
     public IEmailSession getSession () {
         return session;
     }
 
+    /**
+     * <p>Getter for the field <code>protocol</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getProtocol() {
         return protocol;
     }
 
+    /**
+     * <p>Getter for the field <code>email</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * <p>Getter for the field <code>password</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * <p>Getter for the field <code>mailbox</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getMailbox() {
         return mailbox;
     }
 
+    /**
+     * <p>Getter for the field <code>host</code>.</p>
+     *
+     * @return a {@link java.lang.String} object.
+     */
     public String getHost () {
         return host;
     }

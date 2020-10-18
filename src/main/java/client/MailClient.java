@@ -11,6 +11,12 @@ import javax.mail.Store;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 
+/**
+ * <p>MailClient class.</p>
+ *
+ * @author jonathannewton
+ * @version $Id: $Id
+ */
 public class MailClient extends BaseMailClient implements AutoCloseable, Runnable {
     private IEmailSession session;
     private Folder mailBox;
@@ -21,6 +27,12 @@ public class MailClient extends BaseMailClient implements AutoCloseable, Runnabl
     public int pollInterval = 5000;
     public int currentMessageCount;
 
+    /**
+     * <p>Constructor for MailClient.</p>
+     *
+     * @param client a {@link builders.ClientBuilder} object.
+     * @throws java.lang.Exception if any.
+     */
     public MailClient(ClientBuilder client) throws Exception {
         if(client == null){
             throw new Exception("MailClient() : client cannot be null");
@@ -38,6 +50,9 @@ public class MailClient extends BaseMailClient implements AutoCloseable, Runnabl
                 store);
     }
 
+    /**
+     * <p>run.</p>
+     */
     public void run() {
         running.set(true);
 
@@ -63,6 +78,12 @@ public class MailClient extends BaseMailClient implements AutoCloseable, Runnabl
         }
     }
 
+    /**
+     * <p>checkMail.</p>
+     *
+     * @return a int.
+     * @throws javax.mail.MessagingException if any.
+     */
     public int checkMail() throws MessagingException {
         int currentCount = mailBox.getMessageCount();
 
@@ -80,6 +101,7 @@ public class MailClient extends BaseMailClient implements AutoCloseable, Runnabl
                 .setFlag(Flags.Flag.SEEN, true);
     }
 
+    /** {@inheritDoc} */
     @Override
     public void close() throws Exception {
         running.set(false);
@@ -87,15 +109,26 @@ public class MailClient extends BaseMailClient implements AutoCloseable, Runnabl
         store.close();
     }
 
+    /**
+     * <p>start.</p>
+     */
     public void start() {
         worker = new Thread(this);
         worker.start();
     }
 
+    /**
+     * <p>stop.</p>
+     */
     public void stop() {
         running.set(false);
     }
 
+    /**
+     * <p>interrupt.</p>
+     *
+     * @throws java.lang.Exception if any.
+     */
     public void interrupt() throws Exception {
         running.set(false);
         worker.interrupt();

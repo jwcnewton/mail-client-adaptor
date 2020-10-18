@@ -2,7 +2,18 @@ package properties;
 
 import java.util.Properties;
 
+/**
+ * <p>PreConfiguredProperties class.</p>
+ *
+ * @author jonathannewton
+ * @version $Id: $Id
+ */
 public class PreConfiguredProperties {
+    /**
+     * <p>gmailPop3Properties.</p>
+     *
+     * @return a {@link java.util.Properties} object.
+     */
     public static Properties gmailPop3Properties(){
         Properties props = new Properties();
 
@@ -14,6 +25,11 @@ public class PreConfiguredProperties {
         return props;
     }
 
+    /**
+     * <p>gmailSmtpProperties.</p>
+     *
+     * @return a {@link java.util.Properties} object.
+     */
     public static Properties gmailSmtpProperties(){
         Properties props = new Properties();
 
