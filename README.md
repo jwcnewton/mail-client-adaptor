@@ -2,7 +2,8 @@
 A mail client written in Java
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.jwcnewton/mail-client-adaptor/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.jwcnewton/mail-client-adaptor)
-
+[![Java CI](https://github.com/jwcnewton/mail-client-adaptor/actions/workflows/maven.yml/badge.svg)](https://github.com/jwcnewton/mail-client-adaptor/actions/workflows/maven.yml)
+[![Release](https://github.com/jwcnewton/mail-client-adaptor/actions/workflows/release.yml/badge.svg)](https://github.com/jwcnewton/mail-client-adaptor/actions/workflows/release.yml)
 
 ## Example usage
 
